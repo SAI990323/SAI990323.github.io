@@ -343,11 +343,13 @@
             <h2 id="软件构造过程中的多维度视图"><a href="#软件构造过程中的多维度视图" class="headerlink" title="软件构造过程中的多维度视图"></a>软件构造过程中的多维度视图</h2><h3 id="多维度软件视图"><a href="#多维度软件视图" class="headerlink" title="多维度软件视图"></a>多维度软件视图</h3><p>按阶段划分： build and run-time vies (构造时/运行时视图)<br>按动态性划分： moment and eriod views （时刻/阶段视图）<br>按构造对象划分： code and component views （代码/构件视图）</p>
 <p>需要关注的是每个视图的元素、关系和模型</p>
 <h3 id="build-time"><a href="#build-time" class="headerlink" title="build-time"></a>build-time</h3><p>代码级视图：源代码 源代码如何通过基本程序块（如函数，类，方法，接口等）进行逻辑组织，以及它们之间依赖关系代码的逻辑组织<br>组件级视图：体系结构–源代码如何按文件、目录、包、库以及它们之间的一拉关系进行物理组织代码的物理组织<br>时刻视图：源代码和组件在特定时间内的样子特定时刻的软件形态<br>期间视图：它们如何随着时间的推移而发展/变化。软件形态随时间的变化</p>
-<h4 id="代码级视图"><a href="#代码级视图" class="headerlink" title="代码级视图"></a>代码级视图</h4><p>通过三种相互关联的形式：词汇方面–&gt;面向词汇的源代码 语法层面–&gt;面向语法的程序结构： 例如 抽象语法树 语义层面 –&gt; 面向语义的程序结构：例如，类图<br>源代码进行逻辑组织</p>
-<h4 id="AST抽象语法树"><a href="#AST抽象语法树" class="headerlink" title="AST抽象语法树"></a>AST抽象语法树</h4><pre><code>彻底结构化，将 源代码变为一棵树， 对树做各种操作==对 源代码的修改
-</code></pre><h3 id="面向语义的程序结构"><a href="#面向语义的程序结构" class="headerlink" title="面向语义的程序结构"></a>面向语义的程序结构</h3><p>使用UML去描述接口，类，属性，方法和他们之间的关系<br>通常是图形化的或者形式话的<br>在代码的设计阶段建模，并最终转化为源代码<br>他是面向对象分析以及就用户需求分析的结果<br><strong>用于表达“需求”和设计思想，再转化为code</strong></p>
-<h3 id="库"><a href="#库" class="headerlink" title="库"></a>库</h3><p>库存储在自己的磁盘文件中，持有一组可以被其他程序调用的代码函数<br><em>开发人员并不总是构建单个的可执行程序文件，而是将自定义开发的软件和预构建的库放到单个程序中去</em></p>
-
+<h4 id="Build-time-moment-and-code-level-view的结合"><a href="#Build-time-moment-and-code-level-view的结合" class="headerlink" title="Build-time,moment and code-level view的结合"></a>Build-time,moment and code-level view的结合</h4><p>即从源代码的角度，从其基本的程序模块（包括函数，类，方法，等等）以及他们之间的联系，看源代码的逻辑组织。<br>具有三个内在联系的形式：词汇层面，语法层面，语义层面。<br>词汇层面： 使用半结构化的代码：近乎自然语言的风格+遵循特定的编程语法。<br>语法层面：常用抽象语法树（AST），来表示一个半结构化的源代码。<br>语义层面：考虑源代码要实现的目标，将源代码与现实世界联系起来，使用图形化或形式化的方法，来表达”需求“与”设计“思想，再将其转化为code。主要为面向对象的分析与面向需求的设计。<br><strong>用于表达“需求”和设计思想，再转化为code</strong></p>
+<h4 id="build-time-period-and-code-level-view"><a href="#build-time-period-and-code-level-view" class="headerlink" title="build-time,period and code-level view"></a>build-time,period and code-level view</h4><p>随着时间观察变化<br>例如<strong>code churn</strong>(代码变化)</p>
+<h4 id="build-time-moment-and-component-view"><a href="#build-time-moment-and-component-view" class="headerlink" title="build-time,moment and component view"></a>build-time,moment and component view</h4><p>从代码的物理结构（源代码、文件、包和库等)看代码的物理组织<br>+源代码再物理结构上一文件的形式组织，更上层是以目录形式组织<br>+文件再逻辑上被封装为Package，compones和子系统<br>+可服用的模块以库的形式存储<br><strong>在执行build-time的时候需要执行静态链接，在执行时无需提供库文件，动态链接时在run-time时执行的</strong></p>
+<h4 id="库"><a href="#库" class="headerlink" title="库"></a>库</h4><p>库存储在自己的磁盘文件中，持有一组可以被其他程序调用的代码函数<br><em>开发人员并不总是构建单个的可执行程序文件，而是将自定义开发的软件和预构建的库放到单个程序中去</em></p>
+<h5 id="库的来源"><a href="#库的来源" class="headerlink" title="库的来源"></a>库的来源</h5><p>+操作系统提供<br>+编程语言提供<br>+第三方公司<br>+自己编写</p>
+<p><em>Maven repositor</em>一个JAVA的开源项目</p>
+<h4 id="build-time-period-and-component-level-view"><a href="#build-time-period-and-component-level-view" class="headerlink" title="build-time,period and component-level view"></a>build-time,period and component-level view</h4>
           
         
       
