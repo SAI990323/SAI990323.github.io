@@ -427,7 +427,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/02/my_first/" itemprop="url">SoftConstruction_1</a></h1>
+                <a class="post-title-link" href="/2019/03/02/my_first/" itemprop="url">JAVA学习</a></h1>
         
 
         <div class="post-meta">
@@ -480,13 +480,10 @@
         
           
             <p>WHat a fuck day!</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>JAVA的类型可以向下兼容 举个例子这里ArrayList已经被向上转型为List<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Apple&gt; apples = <span class="keyword">new</span> ArrayList&lt;Apple&gt; ();</span><br></pre></td></tr></table></figure></p>
+<h3 id="ArrayList-与-LinkedLIst"><a href="#ArrayList-与-LinkedLIst" class="headerlink" title="ArrayList 与 LinkedLIst"></a>ArrayList 与 LinkedLIst</h3><p>ArrayList 它长于随机访问元素，但是在List中间插入和删除元素比较慢（感觉看上去像是vector）<br>LinkedList 它通过代价较低的在List中间进行的插入和删除操作，提供了我优化的顺序访问，LinkedList在随机访问方面相对比较慢。</p>
+<p>ListIterator是一个更强大的Iterator的子类型，它只能用于各种List类的访问。<br>其特点是可以实现双向移动，同时可以使用set()的方法替换它访问过的最后一个元素</p>
+<p>Set可以用contains函数判定一个set是否是另一个set的子集</p>
 
           
         
@@ -704,15 +701,6 @@
 
             
 
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">标签</span>
-                
-              </div>
             
 
           </nav>
