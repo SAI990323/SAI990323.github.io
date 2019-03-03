@@ -345,7 +345,9 @@
 <h3 id="build-time"><a href="#build-time" class="headerlink" title="build-time"></a>build-time</h3><p>代码级视图：源代码 源代码如何通过基本程序块（如函数，类，方法，接口等）进行逻辑组织，以及它们之间依赖关系代码的逻辑组织<br>组件级视图：体系结构–源代码如何按文件、目录、包、库以及它们之间的一拉关系进行物理组织代码的物理组织<br>时刻视图：源代码和组件在特定时间内的样子特定时刻的软件形态<br>期间视图：它们如何随着时间的推移而发展/变化。软件形态随时间的变化</p>
 <h4 id="代码级视图"><a href="#代码级视图" class="headerlink" title="代码级视图"></a>代码级视图</h4><p>通过三种相互关联的形式：词汇方面–&gt;面向词汇的源代码 语法层面–&gt;面向语法的程序结构： 例如 抽象语法树 语义层面 –&gt; 面向语义的程序结构：例如，类图<br>源代码进行逻辑组织</p>
 <h4 id="AST抽象语法树"><a href="#AST抽象语法树" class="headerlink" title="AST抽象语法树"></a>AST抽象语法树</h4><pre><code>彻底结构化，将 源代码变为一棵树， 对树做各种操作==对 源代码的修改
-</code></pre>
+</code></pre><h3 id="面向语义的程序结构"><a href="#面向语义的程序结构" class="headerlink" title="面向语义的程序结构"></a>面向语义的程序结构</h3><p>使用UML去描述接口，类，属性，方法和他们之间的关系<br>通常是图形化的或者形式话的<br>在代码的设计阶段建模，并最终转化为源代码<br>他是面向对象分析以及就用户需求分析的结果<br><strong>用于表达“需求”和设计思想，再转化为code</strong></p>
+<h3 id="库"><a href="#库" class="headerlink" title="库"></a>库</h3><p>库存储在自己的磁盘文件中，持有一组可以被其他程序调用的代码函数<br><em>开发人员并不总是构建单个的可执行程序文件，而是将自定义开发的软件和预构建的库放到单个程序中去</em></p>
+
           
         
       
@@ -704,8 +706,8 @@
           
             <h2 id="持有对象"><a href="#持有对象" class="headerlink" title="持有对象"></a>持有对象</h2><p>JAVA的类型可以向下兼容 举个例子这里ArrayList已经被向上转型为List<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Apple&gt; apples = <span class="keyword">new</span> ArrayList&lt;Apple&gt; ();</span><br></pre></td></tr></table></figure></p>
 <h3 id="ArrayList-与-LinkedLIst"><a href="#ArrayList-与-LinkedLIst" class="headerlink" title="ArrayList 与 LinkedLIst"></a>ArrayList 与 LinkedLIst</h3><p>ArrayList 它长于随机访问元素，但是在List中间插入和删除元素比较慢（感觉看上去像是vector）<br>LinkedList 它通过代价较低的在List中间进行的插入和删除操作，提供了我优化的顺序访问，LinkedList在随机访问方面相对比较慢。</p>
-<p>###ListIterator<br>ListIterator是一个更强大的Iterator的子类型，它只能用于各种List类的访问。<br>其特点是可以实现双向移动，同时可以使用set()的方法替换它访问过的最后一个元素</p>
-<p>###Set<br>Set可以用contains函数判定一个set是否是另一个set的子集</p>
+<h3 id="ListIterator"><a href="#ListIterator" class="headerlink" title="ListIterator"></a>ListIterator</h3><p>ListIterator是一个更强大的Iterator的子类型，它只能用于各种List类的访问。<br>其特点是可以实现双向移动，同时可以使用set()的方法替换它访问过的最后一个元素</p>
+<h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><p>Set可以用contains函数判定一个set是否是另一个set的子集</p>
 
           
         
