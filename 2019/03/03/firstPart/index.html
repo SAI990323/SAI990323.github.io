@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="软件构造过程中的多维度视图多维度软件视图按阶段划分： build and run-time vies (构造时/运行时视图)按动态性划分： moment and eriod views （时刻/阶段视图）按构造对象划分： code and component views （代码/构件视图） 需要关注的是每个视图的元素、关系和模型 build-time代码级视图：源代码 源代码如何通过基本程序块（如">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-03T03:16:23.876Z">
+<meta property="og:updated_time" content="2019-03-03T04:10:20.239Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一章复习">
 <meta name="twitter:description" content="软件构造过程中的多维度视图多维度软件视图按阶段划分： build and run-time vies (构造时/运行时视图)按动态性划分： moment and eriod views （时刻/阶段视图）按构造对象划分： code and component views （代码/构件视图） 需要关注的是每个视图的元素、关系和模型 build-time代码级视图：源代码 源代码如何通过基本程序块（如">
@@ -344,7 +344,8 @@
 <p>需要关注的是每个视图的元素、关系和模型</p>
 <h3 id="build-time"><a href="#build-time" class="headerlink" title="build-time"></a>build-time</h3><p>代码级视图：源代码 源代码如何通过基本程序块（如函数，类，方法，接口等）进行逻辑组织，以及它们之间依赖关系代码的逻辑组织<br>组件级视图：体系结构–源代码如何按文件、目录、包、库以及它们之间的一拉关系进行物理组织代码的物理组织<br>时刻视图：源代码和组件在特定时间内的样子特定时刻的软件形态<br>期间视图：它们如何随着时间的推移而发展/变化。软件形态随时间的变化</p>
 <h4 id="代码级视图"><a href="#代码级视图" class="headerlink" title="代码级视图"></a>代码级视图</h4><p>通过三种相互关联的形式：词汇方面–&gt;面向词汇的源代码 语法层面–&gt;面向语法的程序结构： 例如 抽象语法树 语义层面 –&gt; 面向语义的程序结构：例如，类图<br>源代码进行逻辑组织</p>
-
+<h4 id="AST抽象语法树"><a href="#AST抽象语法树" class="headerlink" title="AST抽象语法树"></a>AST抽象语法树</h4><pre><code>彻底结构化，将 源代码变为一棵树， 对树做各种操作==对 源代码的修改
+</code></pre>
       
     </div>
     
@@ -505,7 +506,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#软件构造过程中的多维度视图"><span class="nav-number">1.</span> <span class="nav-text">软件构造过程中的多维度视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多维度软件视图"><span class="nav-number">1.1.</span> <span class="nav-text">多维度软件视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#build-time"><span class="nav-number">1.2.</span> <span class="nav-text">build-time</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码级视图"><span class="nav-number">1.2.1.</span> <span class="nav-text">代码级视图</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#软件构造过程中的多维度视图"><span class="nav-number">1.</span> <span class="nav-text">软件构造过程中的多维度视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多维度软件视图"><span class="nav-number">1.1.</span> <span class="nav-text">多维度软件视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#build-time"><span class="nav-number">1.2.</span> <span class="nav-text">build-time</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码级视图"><span class="nav-number">1.2.1.</span> <span class="nav-text">代码级视图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AST抽象语法树"><span class="nav-number">1.2.2.</span> <span class="nav-text">AST抽象语法树</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
