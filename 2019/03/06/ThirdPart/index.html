@@ -87,10 +87,12 @@
 <meta property="og:site_name" content="SAI&#39;s blog">
 <meta property="og:description" content="ADT and OOPData Type and Type CheckingData type in programming languagesStatic vs. dynamic data typesStatic即所有的变量类型在编译时（程序运行之前都是已知的），因此编译器可以推断出所有表达式的类型Dyanamic对于表达式类型是否正确的检查放在程序运行时（如Python） Type check">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-06T13:44:38.618Z">
+<meta property="og:image" content="http://yoursite.com/2019/03/06/ThirdPart/2019/03/06/ThirdPart/1.png">
+<meta property="og:updated_time" content="2019-03-06T14:48:15.867Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ThirdPart">
 <meta name="twitter:description" content="ADT and OOPData Type and Type CheckingData type in programming languagesStatic vs. dynamic data typesStatic即所有的变量类型在编译时（程序运行之前都是已知的），因此编译器可以推断出所有表达式的类型Dyanamic对于表达式类型是否正确的检查放在程序运行时（如Python） Type check">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/06/ThirdPart/2019/03/06/ThirdPart/1.png">
 
 
 
@@ -368,7 +370,8 @@
 <li>返回一个可改变的值</li>
 </ul>
 <p><strong><em>解决方法</em></strong><br>Defensive Copying<br>可以拷贝一遍可变类型然后再返回拷贝后的结果</p>
-<h3 id="Snapshot-diagram-as-a-code-level-run-time-and-moment-view"><a href="#Snapshot-diagram-as-a-code-level-run-time-and-moment-view" class="headerlink" title="Snapshot diagram as a code-level,run time, and moment view"></a>Snapshot diagram as a code-level,run time, and moment view</h3><p>快照图为我们提供了一种可视化更改变量和更改之之间区别的方法：当你分配变量或字段时，将改变箭头指向的位置。你可以将它指向不同的值。当你改变值的内容时如数组或者LIST泥改变的是这个值的内在引用。</p>
+<h3 id="Snapshot-diagram-as-a-code-level-run-time-and-moment-view"><a href="#Snapshot-diagram-as-a-code-level-run-time-and-moment-view" class="headerlink" title="Snapshot diagram as a code-level,run time, and moment view"></a>Snapshot diagram as a code-level,run time, and moment view</h3><img src="/2019/03/06/ThirdPart/2019/03/06/ThirdPart/1.png" title="snapshot">
+<p>快照图为我们提供了一种可视化更改变量和更改之之间区别的方法：当你分配变量或字段时，将改变箭头指向的位置。你可以将它指向不同的值。当你改变值的内容时如数组或者LIST泥改变的是这个值的内在引用。</p>
 <ul>
 <li>对于一个对象类型的值在快照图中用一个圈表示这个对象，当我们想要显示更多细节时，在其中写入字段的名字箭头只想他们对应的值</li>
 <li>不可变对象在快照图中用<em>双边框表示</em></li>
