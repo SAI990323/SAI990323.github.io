@@ -264,6 +264,171 @@
   
   
 
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/ThirdPart/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SAI">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SAI's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/06/ThirdPart/" itemprop="url">ThirdPart</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T19:57:11+08:00">
+                2019-03-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/课程学习/" itemprop="url" rel="index">
+                    <span itemprop="name">课程学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="ADT-and-OOP"><a href="#ADT-and-OOP" class="headerlink" title="ADT and OOP"></a>ADT and OOP</h1><h2 id="Data-Type-and-Type-Checking"><a href="#Data-Type-and-Type-Checking" class="headerlink" title="Data Type and Type Checking"></a>Data Type and Type Checking</h2><h3 id="Data-type-in-programming-languages"><a href="#Data-type-in-programming-languages" class="headerlink" title="Data type in programming languages"></a>Data type in programming languages</h3><h3 id="Static-vs-dynamic-data-types"><a href="#Static-vs-dynamic-data-types" class="headerlink" title="Static vs. dynamic data types"></a>Static vs. dynamic data types</h3><p><strong>Static</strong><br>即所有的变量类型在编译时（程序运行之前都是已知的），因此编译器可以推断出所有表达式的类型<br><strong>Dyanamic</strong><br>对于表达式类型是否正确的检查放在程序运行时（如Python）</p>
+<h3 id="Type-checking"><a href="#Type-checking" class="headerlink" title="Type checking"></a>Type checking</h3><h4 id="Static-Checking-and-Dynamic-Checking"><a href="#Static-Checking-and-Dynamic-Checking" class="headerlink" title="Static Checking and Dynamic Checking"></a>Static Checking and Dynamic Checking</h4><ul>
+<li>静态查错是指bug被自动的发现在程序运行前</li>
+<li>动态查错是指bug被自动的发现在编译时</li>
+<li>No Checking需要自己检查并发现的错误，编译器并不能帮泥找出来</li>
+</ul>
+<h4 id="Static-vs-Dynamic-Checking"><a href="#Static-vs-Dynamic-Checking" class="headerlink" title="Static vs. Dynamic Checking"></a>Static vs. Dynamic Checking</h4><p>静态差错趋向于关于类型的错误，错误往往独立于变量的具体值<br>动态差错往往是由特定值引起的错误（如除0）</p>
+<h3 id="Mutability-and-Immutability"><a href="#Mutability-and-Immutability" class="headerlink" title="Mutability and Immutability"></a>Mutability and Immutability</h3><h4 id="Changing-a-variable-or-its-value"><a href="#Changing-a-variable-or-its-value" class="headerlink" title="Changing a variable or its value"></a>Changing a variable or its value</h4><p><strong>区别</strong></p>
+<ul>
+<li>当你分配给变量时，泥将更改变量箭头指向（类似指针）指向的位置，可以将它指向不同的值</li>
+<li>当你分配可变值的内容时，泥将更改该值内的引用<br><strong><em>需要避免改变导致的内存泄露</em></strong><br>Java中用final修饰符表示不可变，需要注意的是：</li>
+<li>final声明的class不能被继承</li>
+<li>final声明的变量不能被改变</li>
+<li>final声明的方法不能被子类覆盖<br><em>String</em>是一个不可改变的类型，在后面添加字符等于需要新建一个String<br><em>StringBuilder</em> 是一个可改变类型</li>
+</ul>
+<h5 id="使用可变类型的优势"><a href="#使用可变类型的优势" class="headerlink" title="使用可变类型的优势"></a>使用可变类型的优势</h5><ul>
+<li>使用不可变字符会产生大量的临时拷贝</li>
+<li>使用可变类型可以减少拷贝</li>
+<li>从而能够获得更好的性能</li>
+<li>另一方面是方便共享，程序的两个部分可以通过共享一个可变数据结构通信（全局变量既视感）</li>
+</ul>
+<h5 id="使用可变类型的缺点"><a href="#使用可变类型的缺点" class="headerlink" title="使用可变类型的缺点"></a>使用可变类型的缺点</h5><ul>
+<li></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
   <article class="post post-type-tags" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1263,6 +1428,7 @@
 <h3 id="ArrayList-与-LinkedLIst"><a href="#ArrayList-与-LinkedLIst" class="headerlink" title="ArrayList 与 LinkedLIst"></a>ArrayList 与 LinkedLIst</h3><p>ArrayList 它长于随机访问元素，但是在List中间插入和删除元素比较慢（感觉看上去像是vector）<br>LinkedList 它通过代价较低的在List中间进行的插入和删除操作，提供了我优化的顺序访问，LinkedList在随机访问方面相对比较慢。</p>
 <h3 id="ListIterator"><a href="#ListIterator" class="headerlink" title="ListIterator"></a>ListIterator</h3><p>ListIterator是一个更强大的Iterator的子类型，它只能用于各种List类的访问。<br>其特点是可以实现双向移动，同时可以使用set()的方法替换它访问过的最后一个元素</p>
 <h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><p>Set可以用contains函数判定一个set是否是另一个set的子集</p>
+<p><em>String</em>是一个不可改变的类型，在后面添加字符需要新建一个String<br><em>StringBuilder</em> 是一个可改变类型</p>
 
           
         
@@ -1472,7 +1638,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
