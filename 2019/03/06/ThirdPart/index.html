@@ -88,7 +88,7 @@
 <meta property="og:description" content="ADT and OOPData Type and Type CheckingData type in programming languagesStatic vs. dynamic data typesStatic即所有的变量类型在编译时（程序运行之前都是已知的），因此编译器可以推断出所有表达式的类型Dyanamic对于表达式类型是否正确的检查放在程序运行时（如Python） Type check">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/06/ThirdPart/1.png">
-<meta property="og:updated_time" content="2019-03-06T14:54:32.785Z">
+<meta property="og:updated_time" content="2019-03-07T07:39:10.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ThirdPart">
 <meta name="twitter:description" content="ADT and OOPData Type and Type CheckingData type in programming languagesStatic vs. dynamic data typesStatic即所有的变量类型在编译时（程序运行之前都是已知的），因此编译器可以推断出所有表达式的类型Dyanamic对于表达式类型是否正确的检查放在程序运行时（如Python） Type check">
@@ -375,8 +375,9 @@
 <li>对于一个对象类型的值在快照图中用一个圈表示这个对象，当我们想要显示更多细节时，在其中写入字段的名字箭头只想他们对应的值</li>
 <li>不可变对象在快照图中用<em>双边框表示</em></li>
 <li>不可变对象的每次更改需要新建一个</li>
+<li>在快照图中一个不可改变的引用(final)用双箭头表示</li>
 </ul>
-
+<h3 id="Complex-data-types-Arrays-and-Collections"><a href="#Complex-data-types-Arrays-and-Collections" class="headerlink" title="Complex data types: Arrays and Collections"></a>Complex data types: Arrays and Collections</h3>
       
     </div>
     
@@ -406,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/04/Java/" rel="next" title="Java">
-                <i class="fa fa-chevron-left"></i> Java
+              <a href="/2019/03/06/ACM/" rel="next" title="ACM">
+                <i class="fa fa-chevron-left"></i> ACM
               </a>
             
           </div>
@@ -415,10 +416,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/06/ACM/" rel="prev" title="ACM">
-                ACM <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -552,7 +549,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ADT-and-OOP"><span class="nav-number">1.</span> <span class="nav-text">ADT and OOP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Type-and-Type-Checking"><span class="nav-number">1.1.</span> <span class="nav-text">Data Type and Type Checking</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-type-in-programming-languages"><span class="nav-number">1.1.1.</span> <span class="nav-text">Data type in programming languages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Static-vs-dynamic-data-types"><span class="nav-number">1.1.2.</span> <span class="nav-text">Static vs. dynamic data types</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Type-checking"><span class="nav-number">1.1.3.</span> <span class="nav-text">Type checking</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Static-Checking-and-Dynamic-Checking"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">Static Checking and Dynamic Checking</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Static-vs-Dynamic-Checking"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">Static vs. Dynamic Checking</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mutability-and-Immutability"><span class="nav-number">1.1.4.</span> <span class="nav-text">Mutability and Immutability</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Changing-a-variable-or-its-value"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">Changing a variable or its value</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用可变类型的优势"><span class="nav-number">1.1.4.1.1.</span> <span class="nav-text">使用可变类型的优势</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用可变类型的缺点"><span class="nav-number">1.1.4.1.2.</span> <span class="nav-text">使用可变类型的缺点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Snapshot-diagram-as-a-code-level-run-time-and-moment-view"><span class="nav-number">1.1.5.</span> <span class="nav-text">Snapshot diagram as a code-level,run time, and moment view</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ADT-and-OOP"><span class="nav-number">1.</span> <span class="nav-text">ADT and OOP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Type-and-Type-Checking"><span class="nav-number">1.1.</span> <span class="nav-text">Data Type and Type Checking</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-type-in-programming-languages"><span class="nav-number">1.1.1.</span> <span class="nav-text">Data type in programming languages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Static-vs-dynamic-data-types"><span class="nav-number">1.1.2.</span> <span class="nav-text">Static vs. dynamic data types</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Type-checking"><span class="nav-number">1.1.3.</span> <span class="nav-text">Type checking</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Static-Checking-and-Dynamic-Checking"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">Static Checking and Dynamic Checking</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Static-vs-Dynamic-Checking"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">Static vs. Dynamic Checking</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mutability-and-Immutability"><span class="nav-number">1.1.4.</span> <span class="nav-text">Mutability and Immutability</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Changing-a-variable-or-its-value"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">Changing a variable or its value</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用可变类型的优势"><span class="nav-number">1.1.4.1.1.</span> <span class="nav-text">使用可变类型的优势</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用可变类型的缺点"><span class="nav-number">1.1.4.1.2.</span> <span class="nav-text">使用可变类型的缺点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Snapshot-diagram-as-a-code-level-run-time-and-moment-view"><span class="nav-number">1.1.5.</span> <span class="nav-text">Snapshot diagram as a code-level,run time, and moment view</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Complex-data-types-Arrays-and-Collections"><span class="nav-number">1.1.6.</span> <span class="nav-text">Complex data types: Arrays and Collections</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -561,6 +558,9 @@
       
 
       
+
+      <div id="music163player">
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=0&id=2483853001&auto=1&height=32"></iframe>      </div>
 
     </div>
   </aside>
