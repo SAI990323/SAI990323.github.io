@@ -88,7 +88,7 @@
 <meta property="og:description" content="2.2 Process, Systems, and Tools of Software Construction 代码评审分为：结对编程、走查、正是评审回忆、自动化评审  java 使用jar文件的命令 创建 jar -tf example.jar 使用 java -cp example.jar com.examples.Main 软件构造得一般过程：设计、编码、重构、debug、测试、构建、发布">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/05/23/SCreview/2.jpg">
-<meta property="og:updated_time" content="2019-06-23T15:42:49.446Z">
+<meta property="og:updated_time" content="2019-06-23T16:26:18.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SCreview">
 <meta name="twitter:description" content="2.2 Process, Systems, and Tools of Software Construction 代码评审分为：结对编程、走查、正是评审回忆、自动化评审  java 使用jar文件的命令 创建 jar -tf example.jar 使用 java -cp example.jar com.examples.Main 软件构造得一般过程：设计、编码、重构、debug、测试、构建、发布">
@@ -376,6 +376,8 @@
 <li>生产器 以旧的对象为依据/参数创建一个新的对象</li>
 <li>观察器 传入抽象类型对象返回不同类型对象 eg. list.size()</li>
 <li>变值器 改变对象属性的方法(通常返回void 可以返回非空那个类型)</li>
+<li>AF 说明每个变量怎么转化到它的抽象意义 RI 说明了一个合法的表示值（如没有重复字符的字符串)</li>
+<li><strong>测试creators, producers, and mutators：调用observers来观察这些 operations的结果是否满足spec; 测试observers：调用creators, producers, and mutators等方法产生或改变对象，来看结果是否正确</strong></li>
 </ul>
 
       
