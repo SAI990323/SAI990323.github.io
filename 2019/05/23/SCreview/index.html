@@ -88,7 +88,7 @@
 <meta property="og:description" content="2.2 Process, Systems, and Tools of Software Construction 代码评审分为：结对编程、走查、正是评审回忆、自动化评审  java 使用jar文件的命令 创建 jar -tf example.jar 使用 java -cp example.jar com.examples.Main 软件构造得一般过程：设计、编码、重构、debug、测试、构建、发布">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/05/23/SCreview/2.jpg">
-<meta property="og:updated_time" content="2019-06-23T16:26:18.709Z">
+<meta property="og:updated_time" content="2019-06-23T17:20:56.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SCreview">
 <meta name="twitter:description" content="2.2 Process, Systems, and Tools of Software Construction 代码评审分为：结对编程、走查、正是评审回忆、自动化评审  java 使用jar文件的命令 创建 jar -tf example.jar 使用 java -cp example.jar com.examples.Main 软件构造得一般过程：设计、编码、重构、debug、测试、构建、发布">
@@ -379,6 +379,16 @@
 <li>AF 说明每个变量怎么转化到它的抽象意义 RI 说明了一个合法的表示值（如没有重复字符的字符串)</li>
 <li><strong>测试creators, producers, and mutators：调用observers来观察这些 operations的结果是否满足spec; 测试observers：调用creators, producers, and mutators等方法产生或改变对象，来看结果是否正确</strong></li>
 </ul>
+<h3 id="3-4-Object-Oriented-Programming-OOP"><a href="#3-4-Object-Oriented-Programming-OOP" class="headerlink" title="3.4 Object-Oriented Programming (OOP)"></a>3.4 Object-Oriented Programming (OOP)</h3><ul>
+<li>一个类可以实现多个接口</li>
+<li><p>使用静态工厂使得用户不用知道接口的某个具体实现类的名字</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> MyString <span class="title">valueOf</span><span class="params">(<span class="keyword">boolean</span> b)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> FastMyString(<span class="keyword">true</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">MyString s = MyString.valueOf(<span class="keyword">true</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>抽象方法 定义了传入参数但是没有实现</p>
+</li>
+<li>抽象类 至少包含一个抽象方法的类</li>
+<li>重载 \Rightarrow 静态多态</li>
+</ul>
 
       
     </div>
@@ -550,7 +560,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Process-Systems-and-Tools-of-Software-Construction"><span class="nav-number">1.</span> <span class="nav-text">2.2 Process, Systems, and Tools of Software Construction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-Data-Type-and-Type-Checking"><span class="nav-number">2.</span> <span class="nav-text">3.1 Data Type and Type Checking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-Designing-Specification"><span class="nav-number">3.</span> <span class="nav-text">3.2 Designing Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-Abstract-Data-Type-ADT"><span class="nav-number">4.</span> <span class="nav-text">3.3 Abstract Data Type (ADT)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Process-Systems-and-Tools-of-Software-Construction"><span class="nav-number">1.</span> <span class="nav-text">2.2 Process, Systems, and Tools of Software Construction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-Data-Type-and-Type-Checking"><span class="nav-number">2.</span> <span class="nav-text">3.1 Data Type and Type Checking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-Designing-Specification"><span class="nav-number">3.</span> <span class="nav-text">3.2 Designing Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-Abstract-Data-Type-ADT"><span class="nav-number">4.</span> <span class="nav-text">3.3 Abstract Data Type (ADT)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-Object-Oriented-Programming-OOP"><span class="nav-number">5.</span> <span class="nav-text">3.4 Object-Oriented Programming (OOP)</span></a></li></ol></div>
             
 
           </div>
