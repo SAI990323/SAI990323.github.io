@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Java,">
+  <meta name="keywords" content="softconstruction,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="持有对象JAVA的类型可以向下兼容 举个例子这里ArrayList已经被向上转型为List1List&amp;lt;Apple&amp;gt; apples = new ArrayList&amp;lt;Apple&amp;gt; (); ArrayList 与 LinkedLIstArrayList 它长于随机访问元素，但是在List中间插入和删除元素比较慢（感觉看上去像是vector）LinkedList 它通过代价较低的在">
-<meta name="keywords" content="Java">
+<meta name="description" content="适配器模式： 通过增加一个接口，将已存在的子类封装起来，用户面向抽象的接口编程, 使用接口使得客户与具体方法的实现隔离 12345678910111213141516interface Shape&amp;#123;   void display(int x1,int y1);&amp;#125;class Rectangle implements Shape&amp;#123;  void display(int x">
+<meta name="keywords" content="softconstruction">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JAVA学习">
-<meta property="og:url" content="http://yoursite.com/2019/03/02/my_first/index.html">
+<meta property="og:title" content="设计模式">
+<meta property="og:url" content="http://yoursite.com/2019/05/10/设计模式/index.html">
 <meta property="og:site_name" content="SAI&#39;s blog">
-<meta property="og:description" content="持有对象JAVA的类型可以向下兼容 举个例子这里ArrayList已经被向上转型为List1List&amp;lt;Apple&amp;gt; apples = new ArrayList&amp;lt;Apple&amp;gt; (); ArrayList 与 LinkedLIstArrayList 它长于随机访问元素，但是在List中间插入和删除元素比较慢（感觉看上去像是vector）LinkedList 它通过代价较低的在">
+<meta property="og:description" content="适配器模式： 通过增加一个接口，将已存在的子类封装起来，用户面向抽象的接口编程, 使用接口使得客户与具体方法的实现隔离 12345678910111213141516interface Shape&amp;#123;   void display(int x1,int y1);&amp;#125;class Rectangle implements Shape&amp;#123;  void display(int x">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-05T07:13:28.474Z">
+<meta property="og:updated_time" content="2019-06-24T09:44:32.099Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JAVA学习">
-<meta name="twitter:description" content="持有对象JAVA的类型可以向下兼容 举个例子这里ArrayList已经被向上转型为List1List&amp;lt;Apple&amp;gt; apples = new ArrayList&amp;lt;Apple&amp;gt; (); ArrayList 与 LinkedLIstArrayList 它长于随机访问元素，但是在List中间插入和删除元素比较慢（感觉看上去像是vector）LinkedList 它通过代价较低的在">
+<meta name="twitter:title" content="设计模式">
+<meta name="twitter:description" content="适配器模式： 通过增加一个接口，将已存在的子类封装起来，用户面向抽象的接口编程, 使用接口使得客户与具体方法的实现隔离 12345678910111213141516interface Shape&amp;#123;   void display(int x1,int y1);&amp;#125;class Rectangle implements Shape&amp;#123;  void display(int x">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/02/my_first/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/10/设计模式/">
 
 
 
 
 
-  <title>JAVA学习 | SAI's blog</title>
+  <title>设计模式 | SAI's blog</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/02/my_first/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/10/设计模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SAI">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JAVA学习</h1>
+          <h1 class="post-title" itemprop="name headline">设计模式</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-02T21:05:36+08:00">
-                2019-03-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-10T08:20:49+08:00">
+                2019-05-10
               </time>
             
 
@@ -342,11 +342,37 @@
       
 
       
-        <h2 id="持有对象"><a href="#持有对象" class="headerlink" title="持有对象"></a>持有对象</h2><p>JAVA的类型可以向下兼容 举个例子这里ArrayList已经被向上转型为List<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Apple&gt; apples = <span class="keyword">new</span> ArrayList&lt;Apple&gt; ();</span><br></pre></td></tr></table></figure></p>
-<h3 id="ArrayList-与-LinkedLIst"><a href="#ArrayList-与-LinkedLIst" class="headerlink" title="ArrayList 与 LinkedLIst"></a>ArrayList 与 LinkedLIst</h3><p>ArrayList 它长于随机访问元素，但是在List中间插入和删除元素比较慢（感觉看上去像是vector）<br>LinkedList 它通过代价较低的在List中间进行的插入和删除操作，提供了我优化的顺序访问，LinkedList在随机访问方面相对比较慢。</p>
-<h3 id="ListIterator"><a href="#ListIterator" class="headerlink" title="ListIterator"></a>ListIterator</h3><p>ListIterator是一个更强大的Iterator的子类型，它只能用于各种List类的访问。<br>其特点是可以实现双向移动，同时可以使用set()的方法替换它访问过的最后一个元素</p>
-<h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><p>Set可以用contains函数判定一个set是否是另一个set的子集</p>
-<p><em>String</em>是一个不可改变的类型，在后面添加字符需要新建一个String<br><em>StringBuilder</em> 是一个可改变类型</p>
+        <ul>
+<li><p>适配器模式： 通过增加一个接口，将已存在的子类封装起来，用户面向抽象的接口编程, 使用接口使得客户与具体方法的实现隔离</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Shape</span></span>&#123; </span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">(<span class="keyword">int</span> x1,<span class="keyword">int</span> y1)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rectangle</span> <span class="keyword">implements</span> <span class="title">Shape</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">(<span class="keyword">int</span> x1,<span class="keyword">int</span> y1)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">new</span> LegacyRectangle().display(x1,y1);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LegacyRectangle</span>().<span class="title">display</span>(<span class="title">x1</span>,<span class="title">y1</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line">  Shape shape = <span class="keyword">new</span> Rectangle();</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">display</span><span class="params">()</span></span>&#123;shape.display(x1,y1)&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>装饰器模式： decorate抽象类实现主类接口，具体的decorate类继承自decorate抽象类，通过delegation实现功能共享</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stack s = <span class="keyword">new</span> UndoStack(<span class="keyword">new</span> LogStack(<span class="keyword">new</span> hhhStack())</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>外观模式： 提供一个统一的接口来取代一系列小接口调用，相当于对复杂 系统做了一个封装，简化客户端使用<br>策略模式： 客户端对于某项功能有多种实现方式，将这些实现方式归一到一个接口的若干个子类方便调用。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dosomething(<span class="keyword">new</span> MethodA());</span><br><span class="line">dosomething(<span class="keyword">new</span> MethodB());</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>模板模式： 共性的步骤放在抽象类中公共实现，差异化的步骤在各个子类中实现 使用继承和重写实现模板设计模式 可以使用abstract和final来控制公共的和具体的方法</p>
+</li>
+<li><p>迭代器模式：顺序访问对象的元素而不暴露其底层表示 iterator 实现 hasNext,next,remove <strong>Iterable接口：实现该接口的集合对象是可迭代遍历的</strong></p>
+</li>
+<li><p>Factory Method</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SD <span class="title">getSD</span><span class="params">(String type)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(type.equals(<span class="string">"aaa"</span>))&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> sdAAA();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> sdBBB();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Abstract Factory Pattern 多个工厂方法套在一起只调用最高层次的的哪个</p>
+</li>
+<li>构造器模式 挺傻逼的玩意正常写代码的都会不自觉的用到</li>
+<li>桥接模式： 通过delegation+inheritance 建立两个具体类之间的关系<br>可以使用永久性delegation这样在运行时为二者建立联系</li>
+<li>代理模式： 某个对象被希望被客户访问所以设置代理模式，可以有效降低运行代价</li>
+<li>组合模式： 在同类型的对象之间建立起 树型层次结构，一个上层对象可包含多个下层对象</li>
+<li>观察者模式： 在subject类里面防一个list每次对这个类做修改的时候更新这个list中记录的相关类信息 保证list中记录的相关类无时无刻都能直接get到subject类的状态</li>
+<li>访问者设计模式：对特定类型的object的特定操作(visit)，在运行时将 二者动态绑定到一起，该操作可以灵活更改，无需更改被visit的类,日常写代码都能用到意识不到而已，就是把想要实现的功能的一部分放到类的外面不在内部写这样既可以方便大家一起调用也可以方便后期扩展、更改</li>
+<li>命令模式 安全的访问一些操作 信息隐藏</li>
+<li>类似将所以需要改变的东西放到一个链表中逐个更改</li>
+<li>state设计模式 负责管理程序运行状态的转移</li>
+<li>memento设计模式 </li>
+<li>Table-Driven 将代码中复杂的if-else和switch-case语句从 代码中分离出来，通过“查表”的方式完成，从而提高可维护性</li>
+</ul>
 
       
     </div>
@@ -364,7 +390,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"># Java</a>
+            <a href="/tags/softconstruction/" rel="tag"># softconstruction</a>
           
         </div>
       
@@ -377,8 +403,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/28/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/04/07/CCPC2019H/" rel="next" title="CCPC2019H">
+                <i class="fa fa-chevron-left"></i> CCPC2019H
               </a>
             
           </div>
@@ -387,8 +413,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/03/课程学习/" rel="prev" title="课程学习">
-                课程学习 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/06/23/SCreview/" rel="prev" title="SCreview">
+                SCreview <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -441,17 +467,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -512,22 +529,6 @@
 
         </div>
       </section>
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#持有对象"><span class="nav-number">1.</span> <span class="nav-text">持有对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList-与-LinkedLIst"><span class="nav-number">1.1.</span> <span class="nav-text">ArrayList 与 LinkedLIst</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ListIterator"><span class="nav-number">1.2.</span> <span class="nav-text">ListIterator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set"><span class="nav-number">1.3.</span> <span class="nav-text">Set</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

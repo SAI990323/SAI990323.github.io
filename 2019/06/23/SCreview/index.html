@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="softconstruction,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="2.2 Process, Systems, and Tools of Software Construction 代码评审分为：结对编程、走查、正是评审回忆、自动化评审  java 使用jar文件的命令 创建 jar -tf example.jar 使用 java -cp example.jar com.examples.Main 软件构造得一般过程：设计、编码、重构、debug、测试、构建、发布">
+<meta name="keywords" content="softconstruction">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SCreview">
+<meta property="og:url" content="http://yoursite.com/2019/06/23/SCreview/index.html">
+<meta property="og:site_name" content="SAI&#39;s blog">
+<meta property="og:description" content="2.2 Process, Systems, and Tools of Software Construction 代码评审分为：结对编程、走查、正是评审回忆、自动化评审  java 使用jar文件的命令 创建 jar -tf example.jar 使用 java -cp example.jar com.examples.Main 软件构造得一般过程：设计、编码、重构、debug、测试、构建、发布">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/06/23/SCreview/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/06/23/SCreview/1.jpg">
+<meta property="og:updated_time" content="2019-06-24T09:48:18.645Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SCreview">
+<meta name="twitter:description" content="2.2 Process, Systems, and Tools of Software Construction 代码评审分为：结对编程、走查、正是评审回忆、自动化评审  java 使用jar文件的命令 创建 jar -tf example.jar 使用 java -cp example.jar com.examples.Main 软件构造得一般过程：设计、编码、重构、debug、测试、构建、发布">
+<meta name="twitter:image" content="http://yoursite.com/2019/06/23/SCreview/2.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/23/SCreview/">
+
+
+
+
+
+  <title>SCreview | SAI's blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SAI's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/23/SCreview/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SAI">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/../images/2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SAI's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">SCreview</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-23T17:19:49+08:00">
+                2019-06-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/课程学习/" itemprop="url" rel="index">
+                    <span itemprop="name">课程学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="2-2-Process-Systems-and-Tools-of-Software-Construction"><a href="#2-2-Process-Systems-and-Tools-of-Software-Construction" class="headerlink" title="2.2 Process, Systems, and Tools of Software Construction"></a>2.2 Process, Systems, and Tools of Software Construction</h3><ul>
+<li>代码评审分为：结对编程、走查、正是评审回忆、自动化评审 </li>
+<li>java 使用jar文件的命令 创建 jar -tf example.jar 使用 java -cp example.jar com.examples.Main</li>
+<li>软件构造得一般过程：设计、编码、重构、debug、测试、构建、发布</li>
+<li>狭义得软件构造过程: 合法性、编译、链接、测试、打包、安装、部署</li>
+</ul>
+<h3 id="3-1-Data-Type-and-Type-Checking"><a href="#3-1-Data-Type-and-Type-Checking" class="headerlink" title="3.1 Data Type and Type Checking"></a>3.1 Data Type and Type Checking</h3><ul>
+<li>基本数据类型、对象数据类型<br><img src="/2019/06/23/SCreview/2.jpg" alt="types in java"></li>
+<li>静态类型语言在编译阶段进行检查，动态类型语言在运行阶段进行检查</li>
+<li>改变一个变量:  将该变量指向另一个值得存储空间</li>
+<li>改变一个变量得值:  将该变量指向得值得存储空间种写入一个新的值</li>
+<li>拷贝式编程</li>
+<li>引用是不可改变的但是指向的值是可以改变的，可变的引用可以指向不可变的值.</li>
+<li>snapshot 图</li>
+</ul>
+<h3 id="3-2-Designing-Specification"><a href="#3-2-Designing-Specification" class="headerlink" title="3.2 Designing Specification"></a>3.2 Designing Specification</h3><ul>
+<li>更弱的前置条件和更强的后置条件都会使 spec变强</li>
+<li>确定的规约(给定输入输出确定) 欠定的规约（给定输入可以有多个输出） 非确定的规约（给定输入多次执行输出可能不同）</li>
+<li>操作式规约 声明式规约</li>
+<li>是否适用前置条件取决于（1) check的代价 （2） 方法的使用范围</li>
+</ul>
+<h3 id="3-3-Abstract-Data-Type-ADT"><a href="#3-3-Abstract-Data-Type-ADT" class="headerlink" title="3.3 Abstract Data Type (ADT)"></a>3.3 Abstract Data Type (ADT)</h3><ul>
+<li>抽象：使用更简单，更高级别的想法省略或隐藏低级细节</li>
+<li>模块化：将系统划分为组件或模块，每个组件或模块可以与系统的其余部分分开设计，实现，测试，推理和重用</li>
+<li>封装：围绕模块（硬壳或胶囊）构建墙壁，以便模块负责其自身的内部行为，并且系统其他部分中的错误不会损害其完整性</li>
+<li>信息隐藏：从系统的其余部分隐藏模块实现的详细信息，以便稍后可以更改这些详细信息，而无需更改系统的其余部分</li>
+<li>关注点分离：使功能（或“关注”）成为单个模块的责任，而不是将其分布在多个模块中</li>
+<li>ADT 由其操作定义 与其内部如何实现无关</li>
+<li>构造器 创建给类型的新对象</li>
+<li>生产器 以旧的对象为依据/参数创建一个新的对象</li>
+<li>观察器 传入抽象类型对象返回不同类型对象 eg. list.size()</li>
+<li>变值器 改变对象属性的方法(通常返回void 可以返回非空那个类型)</li>
+<li>AF 说明每个变量怎么转化到它的抽象意义 RI 说明了一个合法的表示值（如没有重复字符的字符串)</li>
+<li><strong>测试creators, producers, and mutators：调用observers来观察这些 operations的结果是否满足spec; 测试observers：调用creators, producers, and mutators等方法产生或改变对象，来看结果是否正确</strong></li>
+</ul>
+<h3 id="3-4-Object-Oriented-Programming-OOP"><a href="#3-4-Object-Oriented-Programming-OOP" class="headerlink" title="3.4 Object-Oriented Programming (OOP)"></a>3.4 Object-Oriented Programming (OOP)</h3><ul>
+<li>一个类可以实现多个接口</li>
+<li><p>使用静态工厂使得用户不用知道接口的某个具体实现类的名字</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> MyString <span class="title">valueOf</span><span class="params">(<span class="keyword">boolean</span> b)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> FastMyString(<span class="keyword">true</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">MyString s = MyString.valueOf(<span class="keyword">true</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>抽象方法 定义了传入参数但是没有实现</p>
+</li>
+<li>抽象类 至少包含一个抽象方法的类</li>
+<li>重载 == 静态多态 （在编译时决定具体执行哪个方法) </li>
+<li>重载一定要改变参数列表</li>
+<li>子类型的规约不能弱化超类型的规约</li>
+<li>动态分配 推迟绑定 运行阶段决定使用哪种子方法</li>
+<li>OOP的历史在这里（可能要看？</li>
+</ul>
+<h3 id="3-5-Equality-in-ADT-and-OOP"><a href="#3-5-Equality-in-ADT-and-OOP" class="headerlink" title="3.5 Equality in ADT and OOP"></a>3.5 Equality in ADT and OOP</h3><ul>
+<li>AF定义等价性（映射到同样的结果则等价）</li>
+<li>站在外部观察者角度：对两个对象调用任何相同的操作，都会得到相同的结果，则认为这两个对象是等价的</li>
+<li>不要在超类种用instanceof检查子类</li>
+<li>equals满足自反对称传递</li>
+<li>观察等价性：在不改变状态的情况下，两个mutable对象看起来是否一致</li>
+<li>行为等价性：调用对象的任何方法都表现出一致的结果</li>
+<li>可变类型在放入HashSet,HashMap等结构的同时即确定了hash值不再改变即如果改变了可变类型就在set/map里找不到了</li>
+<li>不可变类型必须重写equals和hashcode，可变类型不应该重写这两个方法</li>
+<li><strong>x.clone() != x</strong></li>
+</ul>
+<h3 id="4-1-Construction-for-Understandability"><a href="#4-1-Construction-for-Understandability" class="headerlink" title="4.1 Construction for Understandability"></a>4.1 Construction for Understandability</h3><ul>
+<li>命名长度、命名独特性比例、代码长度、注释的密度(MCOMM %)、代码布局、避免多层嵌套、等宽字体</li>
+<li>标题注释、介绍性注释、块注释、行注释</li>
+<li>注释说明做什么不说明怎么做、注释不应该展示代码中可以被轻易推测的信息</li>
+<li>复用的粒度应等价于 发布的粒度</li>
+<li>不允许在包依赖 图中出现任何圈/回路</li>
+<li>包之间的依赖关系只能指向稳定的方向,稳定的包 较难发生改变</li>
+<li>在稳定性与抽象度之间建立关联,一个完全稳定的包中只应包含抽象类,一个包是稳定的，那么它就 应该尽可能抽象</li>
+<li>CRP原则: 一个包中所有类应该是共同重用的。如果重用了包中的一个类，那么就要重用包中的所有类</li>
+</ul>
+<h3 id="5-1-Metrics-Morphology-and-External-Observations-of-Reusability"><a href="#5-1-Metrics-Morphology-and-External-Observations-of-Reusability" class="headerlink" title="5.1 Metrics, Morphology and External Observations of Reusability"></a>5.1 Metrics, Morphology and External Observations of Reusability</h3><ul>
+<li>框架：一组具体类、抽象类、及其之间的连接关系</li>
+<li>开发者根据 framework的规约，填充自己的代码进去，形成完整系统（比如gui中实现点击屏幕某一位置的功能）</li>
+<li>控制反转 由第三方容器来控制对象之间的依赖关系</li>
+<li><strong>LSP 里氏替换原则</strong></li>
+</ul>
+<h3 id="5-2-Construction-for-Reuse"><a href="#5-2-Construction-for-Reuse" class="headerlink" title="5.2 Construction for Reuse"></a>5.2 Construction for Reuse</h3><ul>
+<li>泛型不协变—类型擦除</li>
+<li>有通配符忽视上面一条</li>
+<li>如果子类只需要复用父类中的一小部分方法可以不需 要使用继承，而是通过委派机制来实现</li>
+<li>接口之间通过extends实现 行为的扩展（接口组合） </li>
+<li>白盒设计模式 使用子类化和重写方法进行扩展 通常使用模板设计模式 </li>
+<li>黑盒设计模式 使用插件接口扩展 通常使用 strategy observer设计模式<br><img src="/2019/06/23/SCreview/1.jpg" alt="Whitebox vs. Blackbox Frameworks"></li>
+<li><strong>iterator 本质是复制了一份引用所以可以remove</strong></li>
+</ul>
+<h3 id="5-3-Design-Patterns-for-Reuse"><a href="#5-3-Design-Patterns-for-Reuse" class="headerlink" title="5.3 Design Patterns for Reuse"></a>5.3 Design Patterns for Reuse</h3><ul>
+<li>见设计模式章节</li>
+</ul>
+<h3 id="6-1-Metrics-and-Construction-Principles-for-Maintainability"><a href="#6-1-Metrics-and-Construction-Principles-for-Maintainability" class="headerlink" title="6.1  Metrics and Construction Principles for Maintainability"></a>6.1  Metrics and Construction Principles for Maintainability</h3><ul>
+<li>圈复杂度、代码行数、继承的曾次数、类之间的耦合度、单元测试的覆盖率用来衡量 可维护性的方法</li>
+<li>模块化的五个要求：可分解性、可组合性、可理解性、可持续性、出现异常之后的保护</li>
+<li>模块化设计的五个规则：直接映射、尽可能少的接口、尽可能小的接口、显式接口、信息隐藏.</li>
+<li></li>
+<li>单一责任原则（让修改某个类的方法尽量少）</li>
+<li>开闭原则 （对扩展性开放，对修改封闭）</li>
+<li>客户端不需要的接口就不用给它 使用private保护起来</li>
+</ul>
+<h3 id="6-2-Design-Patterns-for-Maintainability"><a href="#6-2-Design-Patterns-for-Maintainability" class="headerlink" title="6.2 Design Patterns for Maintainability"></a>6.2 Design Patterns for Maintainability</h3><p>参见设计模式</p>
+<h3 id="6-3-Maintainability-Oriented-Construction-Techniques"><a href="#6-3-Maintainability-Oriented-Construction-Techniques" class="headerlink" title="6.3 Maintainability-Oriented Construction Techniques"></a>6.3 Maintainability-Oriented Construction Techniques</h3><ul>
+<li>Table-Driven 将代码中复杂的if-else和switch-case语句从 代码中分离出来，通过“查表”的方式完成，从而提高可维护性</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/softconstruction/" rel="tag"># softconstruction</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/10/设计模式/" rel="next" title="设计模式">
+                <i class="fa fa-chevron-left"></i> 设计模式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/24/做题的一些记录/" rel="prev" title="做题的一些记录">
+                做题的一些记录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/../images/2.jpg" alt="SAI">
+            
+              <p class="site-author-name" itemprop="name">SAI</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Process-Systems-and-Tools-of-Software-Construction"><span class="nav-number">1.</span> <span class="nav-text">2.2 Process, Systems, and Tools of Software Construction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-Data-Type-and-Type-Checking"><span class="nav-number">2.</span> <span class="nav-text">3.1 Data Type and Type Checking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-Designing-Specification"><span class="nav-number">3.</span> <span class="nav-text">3.2 Designing Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-Abstract-Data-Type-ADT"><span class="nav-number">4.</span> <span class="nav-text">3.3 Abstract Data Type (ADT)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-Object-Oriented-Programming-OOP"><span class="nav-number">5.</span> <span class="nav-text">3.4 Object-Oriented Programming (OOP)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-Equality-in-ADT-and-OOP"><span class="nav-number">6.</span> <span class="nav-text">3.5 Equality in ADT and OOP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-Construction-for-Understandability"><span class="nav-number">7.</span> <span class="nav-text">4.1 Construction for Understandability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-Metrics-Morphology-and-External-Observations-of-Reusability"><span class="nav-number">8.</span> <span class="nav-text">5.1 Metrics, Morphology and External Observations of Reusability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-Construction-for-Reuse"><span class="nav-number">9.</span> <span class="nav-text">5.2 Construction for Reuse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-Design-Patterns-for-Reuse"><span class="nav-number">10.</span> <span class="nav-text">5.3 Design Patterns for Reuse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-Metrics-and-Construction-Principles-for-Maintainability"><span class="nav-number">11.</span> <span class="nav-text">6.1  Metrics and Construction Principles for Maintainability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-Design-Patterns-for-Maintainability"><span class="nav-number">12.</span> <span class="nav-text">6.2 Design Patterns for Maintainability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-Maintainability-Oriented-Construction-Techniques"><span class="nav-number">13.</span> <span class="nav-text">6.3 Maintainability-Oriented Construction Techniques</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+          <div id="music163player">
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="//music.163.com/outchain/player?type=0&id=2698724706&auto=1&height=430"></iframe>
+      </div>
+
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SAI</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
