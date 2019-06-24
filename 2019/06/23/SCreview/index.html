@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/06/23/SCreview/2.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/06/23/SCreview/1.jpg">
-<meta property="og:updated_time" content="2019-06-24T09:48:18.645Z">
+<meta property="og:updated_time" content="2019-06-24T14:27:20.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SCreview">
 <meta name="twitter:description" content="2.2 Process, Systems, and Tools of Software Construction 代码评审分为：结对编程、走查、正是评审回忆、自动化评审  java 使用jar文件的命令 创建 jar -tf example.jar 使用 java -cp example.jar com.examples.Main 软件构造得一般过程：设计、编码、重构、debug、测试、构建、发布">
@@ -434,7 +434,7 @@
 <li>见设计模式章节</li>
 </ul>
 <h3 id="6-1-Metrics-and-Construction-Principles-for-Maintainability"><a href="#6-1-Metrics-and-Construction-Principles-for-Maintainability" class="headerlink" title="6.1  Metrics and Construction Principles for Maintainability"></a>6.1  Metrics and Construction Principles for Maintainability</h3><ul>
-<li>圈复杂度、代码行数、继承的曾次数、类之间的耦合度、单元测试的覆盖率用来衡量 可维护性的方法</li>
+<li>圈复杂度、代码行数、继承的曾次数、类之间的耦合度、单元测试的覆盖率用来衡量可维护性的方法</li>
 <li>模块化的五个要求：可分解性、可组合性、可理解性、可持续性、出现异常之后的保护</li>
 <li>模块化设计的五个规则：直接映射、尽可能少的接口、尽可能小的接口、显式接口、信息隐藏.</li>
 <li></li>
@@ -446,6 +446,59 @@
 <h3 id="6-3-Maintainability-Oriented-Construction-Techniques"><a href="#6-3-Maintainability-Oriented-Construction-Techniques" class="headerlink" title="6.3 Maintainability-Oriented Construction Techniques"></a>6.3 Maintainability-Oriented Construction Techniques</h3><ul>
 <li>Table-Driven 将代码中复杂的if-else和switch-case语句从 代码中分离出来，通过“查表”的方式完成，从而提高可维护性</li>
 </ul>
+<h3 id="7-1-Robustness-and-Correctness"><a href="#7-1-Robustness-and-Correctness" class="headerlink" title="7.1 Robustness and Correctness"></a>7.1 Robustness and Correctness</h3><ul>
+<li>对外的接口，倾向于健壮；对内的实现，倾向于正确</li>
+<li>MTBF 平均失效间隔时间</li>
+<li>KLOC 每千行代码中遗留的bug数量</li>
+</ul>
+<h3 id="7-2-Error-and-Exception-Handling"><a href="#7-2-Error-and-Exception-Handling" class="headerlink" title="7.2 Error and Exception Handling"></a>7.2 Error and Exception Handling</h3><ul>
+<li>errors and runtime exceptions are unchecked exceptions</li>
+<li>throws使用在函数上，throw使用在函数内</li>
+<li>根据MIT规则 对特殊的返回结果使用checked异常 对bug、未知的错误使用unexpected异常</li>
+<li>程序员必须在方法的spec中明确写清本方法会抛出的所有checked exception，以便于调用该方法的client加以处理</li>
+<li>对于异常 尽量在函数内部处理</li>
+<li><p>finally 不管怎么样都会被运行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">finally</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">2</span>; <span class="comment">// right</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TWR 退出try block的时候自动close 不用写finally</p>
+</li>
+</ul>
+<h3 id="7-3-Assertions-and-Defensive-Programming"><a href="#7-3-Assertions-and-Defensive-Programming" class="headerlink" title="7.3 Assertions and Defensive Programming"></a>7.3 Assertions and Defensive Programming</h3><ul>
+<li>java -da test //取消断言</li>
+<li>程序之外的事情不要乱做断言</li>
+<li>防止不合法输入、断言、抛出异常、解决error –&gt; 防御式编程</li>
+<li>操作间计数？ proxy设计模式？ 对外部函数的调用使用异常处理、对内部函数的调用使用断言</li>
+</ul>
+<h3 id="7-4-Debugging"><a href="#7-4-Debugging" class="headerlink" title="7.4 Debugging"></a>7.4 Debugging</h3><ul>
+<li>输出调试 经常用</li>
+<li>分治查错 sb玩意，是在找不出来可以用一用，但是bug是很多个连锁就gg</li>
+<li>切片差错、观察代码每一行对出错的部分是否有贡献</li>
+<li>利用版本控制寻找在哪个commit后出现bug 然后对比代码改变 // git bisect</li>
+<li>符号化调试</li>
+<li>Debugger 不会用.jpg</li>
+</ul>
+<h3 id="7-5-Testing-and-Test-First-Programming"><a href="#7-5-Testing-and-Test-First-Programming" class="headerlink" title="7.5 Testing and Test-First Programming"></a>7.5 Testing and Test-First Programming</h3><ul>
+<li>白盒测试：对程序内部代码 结构的测试 </li>
+<li>黑盒测试：对程序外部表现出来的行 为的测试</li>
+<li>针对软件进行单元测试</li>
+<li>可以使用等价类的思想</li>
+<li>注意边界情况（要是经常在这里犯错不妨对所有边界特殊处理</li>
+<li>白盒测试考虑内部实现细节更容易debug但是时间消耗很大</li>
+</ul>
+<h3 id="8-1-Performance-Metrics"><a href="#8-1-Performance-Metrics" class="headerlink" title="8.1 Performance Metrics"></a>8.1 Performance Metrics</h3><p>none</p>
+<h3 id="8-2-Memory-Performance-and-Garbage-Collection"><a href="#8-2-Memory-Performance-and-Garbage-Collection" class="headerlink" title="8.2 Memory Performance and Garbage Collection"></a>8.2 Memory Performance and Garbage Collection</h3><ul>
+<li>所有局部的基本数据类型都在栈上创建 </li>
+<li>多线程 之间传递数据，是通过复制而非引用</li>
+<li>所有对象都在堆上创建 </li>
+<li>堆上创建的对象可被所有线程共享引用</li>
+<li>可访问对象，就可以访问对象内的成员 变量</li>
+<li>如果两个线程调用同一个对象上的 某个方法，它们分别保留该方法的 局部变量的拷贝</li>
+<li>Method Area: 用于存储被VM加 载的类信息、常量、静态变量等 </li>
+<li>gc四种策略 引用计数（拓扑） 标记-清楚（bfs) 标记整理(空余出来的放到一起) 复制（把要用的复制出来、剩下的全删了)</li>
+<li>困难的参数设置<br>-XX: MetaspaceSize  perm 初始size<br>-XX: MaxMetaspaceSize  perm 初始size<br>-Xms: 初始整体内存大小<br>-Xmx: 整体最大大小<br>-XX: NewSize=<n>[g|m|k] 表示yonng的大小<br>-XX MaNewSize=<n>[g|m|k] 表示yong的最大大小<br>-XX:NewRatio=<n>  the radio between and old generation is 1 : n<br>-XX:SurvivorRatio=<n>  the radio between eden and survivor space n : 1</n></n></n></n></li>
+</ul>
+<h3 id="8-3-amp-8-4"><a href="#8-3-amp-8-4" class="headerlink" title="8.3 &amp; 8.4"></a>8.3 &amp; 8.4</h3><p>一个IO 一个将动态测试工具 实验里都用了 没啥好写的 让我手写肯定是写不出来的没有ide 我就是个five</p>
+<h3 id="8-5-Code-Tuning-for-Performance-Optimization"><a href="#8-5-Code-Tuning-for-Performance-Optimization" class="headerlink" title="8.5 Code Tuning for Performance Optimization"></a>8.5 Code Tuning for Performance Optimization</h3><p>见设计模式</p>
 
       
     </div>
@@ -621,7 +674,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Process-Systems-and-Tools-of-Software-Construction"><span class="nav-number">1.</span> <span class="nav-text">2.2 Process, Systems, and Tools of Software Construction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-Data-Type-and-Type-Checking"><span class="nav-number">2.</span> <span class="nav-text">3.1 Data Type and Type Checking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-Designing-Specification"><span class="nav-number">3.</span> <span class="nav-text">3.2 Designing Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-Abstract-Data-Type-ADT"><span class="nav-number">4.</span> <span class="nav-text">3.3 Abstract Data Type (ADT)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-Object-Oriented-Programming-OOP"><span class="nav-number">5.</span> <span class="nav-text">3.4 Object-Oriented Programming (OOP)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-Equality-in-ADT-and-OOP"><span class="nav-number">6.</span> <span class="nav-text">3.5 Equality in ADT and OOP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-Construction-for-Understandability"><span class="nav-number">7.</span> <span class="nav-text">4.1 Construction for Understandability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-Metrics-Morphology-and-External-Observations-of-Reusability"><span class="nav-number">8.</span> <span class="nav-text">5.1 Metrics, Morphology and External Observations of Reusability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-Construction-for-Reuse"><span class="nav-number">9.</span> <span class="nav-text">5.2 Construction for Reuse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-Design-Patterns-for-Reuse"><span class="nav-number">10.</span> <span class="nav-text">5.3 Design Patterns for Reuse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-Metrics-and-Construction-Principles-for-Maintainability"><span class="nav-number">11.</span> <span class="nav-text">6.1  Metrics and Construction Principles for Maintainability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-Design-Patterns-for-Maintainability"><span class="nav-number">12.</span> <span class="nav-text">6.2 Design Patterns for Maintainability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-Maintainability-Oriented-Construction-Techniques"><span class="nav-number">13.</span> <span class="nav-text">6.3 Maintainability-Oriented Construction Techniques</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Process-Systems-and-Tools-of-Software-Construction"><span class="nav-number">1.</span> <span class="nav-text">2.2 Process, Systems, and Tools of Software Construction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-Data-Type-and-Type-Checking"><span class="nav-number">2.</span> <span class="nav-text">3.1 Data Type and Type Checking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-Designing-Specification"><span class="nav-number">3.</span> <span class="nav-text">3.2 Designing Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-Abstract-Data-Type-ADT"><span class="nav-number">4.</span> <span class="nav-text">3.3 Abstract Data Type (ADT)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-Object-Oriented-Programming-OOP"><span class="nav-number">5.</span> <span class="nav-text">3.4 Object-Oriented Programming (OOP)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-Equality-in-ADT-and-OOP"><span class="nav-number">6.</span> <span class="nav-text">3.5 Equality in ADT and OOP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-Construction-for-Understandability"><span class="nav-number">7.</span> <span class="nav-text">4.1 Construction for Understandability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-Metrics-Morphology-and-External-Observations-of-Reusability"><span class="nav-number">8.</span> <span class="nav-text">5.1 Metrics, Morphology and External Observations of Reusability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-Construction-for-Reuse"><span class="nav-number">9.</span> <span class="nav-text">5.2 Construction for Reuse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-Design-Patterns-for-Reuse"><span class="nav-number">10.</span> <span class="nav-text">5.3 Design Patterns for Reuse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-Metrics-and-Construction-Principles-for-Maintainability"><span class="nav-number">11.</span> <span class="nav-text">6.1  Metrics and Construction Principles for Maintainability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-Design-Patterns-for-Maintainability"><span class="nav-number">12.</span> <span class="nav-text">6.2 Design Patterns for Maintainability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-Maintainability-Oriented-Construction-Techniques"><span class="nav-number">13.</span> <span class="nav-text">6.3 Maintainability-Oriented Construction Techniques</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-Robustness-and-Correctness"><span class="nav-number">14.</span> <span class="nav-text">7.1 Robustness and Correctness</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-Error-and-Exception-Handling"><span class="nav-number">15.</span> <span class="nav-text">7.2 Error and Exception Handling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-Assertions-and-Defensive-Programming"><span class="nav-number">16.</span> <span class="nav-text">7.3 Assertions and Defensive Programming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-Debugging"><span class="nav-number">17.</span> <span class="nav-text">7.4 Debugging</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-Testing-and-Test-First-Programming"><span class="nav-number">18.</span> <span class="nav-text">7.5 Testing and Test-First Programming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-Performance-Metrics"><span class="nav-number">19.</span> <span class="nav-text">8.1 Performance Metrics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-Memory-Performance-and-Garbage-Collection"><span class="nav-number">20.</span> <span class="nav-text">8.2 Memory Performance and Garbage Collection</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-amp-8-4"><span class="nav-number">21.</span> <span class="nav-text">8.3 &amp; 8.4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-5-Code-Tuning-for-Performance-Optimization"><span class="nav-number">22.</span> <span class="nav-text">8.5 Code Tuning for Performance Optimization</span></a></li></ol></div>
             
 
           </div>

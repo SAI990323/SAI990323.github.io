@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="SAI&#39;s blog">
 <meta property="og:description" content="适配器模式： 通过增加一个接口，将已存在的子类封装起来，用户面向抽象的接口编程, 使用接口使得客户与具体方法的实现隔离 12345678910111213141516interface Shape&amp;#123;   void display(int x1,int y1);&amp;#125;class Rectangle implements Shape&amp;#123;  void display(int x">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-24T09:44:32.099Z">
+<meta property="og:updated_time" content="2019-06-24T14:34:43.299Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式">
 <meta name="twitter:description" content="适配器模式： 通过增加一个接口，将已存在的子类封装起来，用户面向抽象的接口编程, 使用接口使得客户与具体方法的实现隔离 12345678910111213141516interface Shape&amp;#123;   void display(int x1,int y1);&amp;#125;class Rectangle implements Shape&amp;#123;  void display(int x">
@@ -368,10 +368,13 @@
 <li>观察者模式： 在subject类里面防一个list每次对这个类做修改的时候更新这个list中记录的相关类信息 保证list中记录的相关类无时无刻都能直接get到subject类的状态</li>
 <li>访问者设计模式：对特定类型的object的特定操作(visit)，在运行时将 二者动态绑定到一起，该操作可以灵活更改，无需更改被visit的类,日常写代码都能用到意识不到而已，就是把想要实现的功能的一部分放到类的外面不在内部写这样既可以方便大家一起调用也可以方便后期扩展、更改</li>
 <li>命令模式 安全的访问一些操作 信息隐藏</li>
-<li>类似将所以需要改变的东西放到一个链表中逐个更改</li>
+<li>责任链设计模式类似将所以需要改变的东西放到一个链表中逐个更改</li>
 <li>state设计模式 负责管理程序运行状态的转移</li>
-<li>memento设计模式 </li>
-<li>Table-Driven 将代码中复杂的if-else和switch-case语句从 代码中分离出来，通过“查表”的方式完成，从而提高可维护性</li>
+<li>memento设计模式 记录每一步的状态 可以用list</li>
+<li>单例模式 构造器设置为private 内部生成一个单一实例 首次调用时构造以后直接返回</li>
+<li>轻量模式：降低大量objects带来的代价 将同一个objects指向相同的地方 实现的时候设计一个可共享子类 一个不可共享子类. 把这个玩意当作工厂可以在这里当作一个存储池（如使用map）然后把公共的部分存到这里，取得时候调用.</li>
+<li>原型模式: 通过clone而非new来出啊关键object</li>
+<li>对象池模式： 核心是对象服用，不用时暂存留着后续使用。</li>
 </ul>
 
       
