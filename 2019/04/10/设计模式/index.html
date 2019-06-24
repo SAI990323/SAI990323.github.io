@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="适配器模式： 通过增加一个接口，将已存在的子类封装起来，用户面向抽象的接口编程。装饰器模式： 通过一层一层extends在新的子类中添加新的特性外观模式： 将多种情况复杂的对ADT的访问放入一个接口中。策略模式： 客户端对于某项功能有多种实现方式，将这些实现方式归一到一个接口的若干个子类方便调用。模板模式： 共性的步骤放在抽象类中公共实现，差异化的步骤在各个子类中实现">
+<meta name="description" content="适配器模式： 通过增加一个接口，将已存在的子类封装起来，用户面向抽象的接口编程, 使用接口使得客户与具体方法的实现隔离12345678910111213141516interface Shape&amp;#123;  void display(int x1,int y1);&amp;#125;class Rectangle implements Shape&amp;#123;  void display(int x1,i">
 <meta name="keywords" content="softconstruction">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式">
 <meta property="og:url" content="http://yoursite.com/2019/04/10/设计模式/index.html">
 <meta property="og:site_name" content="SAI&#39;s blog">
-<meta property="og:description" content="适配器模式： 通过增加一个接口，将已存在的子类封装起来，用户面向抽象的接口编程。装饰器模式： 通过一层一层extends在新的子类中添加新的特性外观模式： 将多种情况复杂的对ADT的访问放入一个接口中。策略模式： 客户端对于某项功能有多种实现方式，将这些实现方式归一到一个接口的若干个子类方便调用。模板模式： 共性的步骤放在抽象类中公共实现，差异化的步骤在各个子类中实现">
+<meta property="og:description" content="适配器模式： 通过增加一个接口，将已存在的子类封装起来，用户面向抽象的接口编程, 使用接口使得客户与具体方法的实现隔离12345678910111213141516interface Shape&amp;#123;  void display(int x1,int y1);&amp;#125;class Rectangle implements Shape&amp;#123;  void display(int x1,i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-10T01:06:10.310Z">
+<meta property="og:updated_time" content="2019-06-24T04:18:00.830Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式">
-<meta name="twitter:description" content="适配器模式： 通过增加一个接口，将已存在的子类封装起来，用户面向抽象的接口编程。装饰器模式： 通过一层一层extends在新的子类中添加新的特性外观模式： 将多种情况复杂的对ADT的访问放入一个接口中。策略模式： 客户端对于某项功能有多种实现方式，将这些实现方式归一到一个接口的若干个子类方便调用。模板模式： 共性的步骤放在抽象类中公共实现，差异化的步骤在各个子类中实现">
+<meta name="twitter:description" content="适配器模式： 通过增加一个接口，将已存在的子类封装起来，用户面向抽象的接口编程, 使用接口使得客户与具体方法的实现隔离12345678910111213141516interface Shape&amp;#123;  void display(int x1,int y1);&amp;#125;class Rectangle implements Shape&amp;#123;  void display(int x1,i">
 
 
 
@@ -342,7 +342,10 @@
       
 
       
-        <p>适配器模式： 通过增加一个接口，将已存在的子类封装起来，用户面向抽象的接口编程。<br>装饰器模式： 通过一层一层extends在新的子类中添加新的特性<br>外观模式： 将多种情况复杂的对ADT的访问放入一个接口中。<br>策略模式： 客户端对于某项功能有多种实现方式，将这些实现方式归一到一个接口的若干个子类方便调用。<br>模板模式： 共性的步骤放在抽象类中公共实现，差异化的步骤在各个子类中实现</p>
+        <p>适配器模式： 通过增加一个接口，将已存在的子类封装起来，用户面向抽象的接口编程, 使用接口使得客户与具体方法的实现隔离<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Shape</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">(<span class="keyword">int</span> x1,<span class="keyword">int</span> y1)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rectangle</span> <span class="keyword">implements</span> <span class="title">Shape</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">(<span class="keyword">int</span> x1,<span class="keyword">int</span> y1)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">new</span> LegacyRectangle().display(x1,y1);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LegacyRectangle</span>().<span class="title">display</span>(<span class="title">x1</span>,<span class="title">y1</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line">  Shape shape = <span class="keyword">new</span> Rectangle();</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">display</span><span class="params">()</span></span>&#123;shape.display(x1,y1)&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>装饰器模式： decorate抽象类实现主类接口，具体的decorate类继承自decorate抽象类，通过delegation实现功能共享<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stack s = <span class="keyword">new</span> UndoStack(<span class="keyword">new</span> LogStack(<span class="keyword">new</span> hhhStack())</span><br></pre></td></tr></table></figure></p>
+<p>外观模式： 提供一个统一的接口来取代一系列小接口调用，相当于对复杂 系统做了一个封装，简化客户端使用<br>策略模式： 客户端对于某项功能有多种实现方式，将这些实现方式归一到一个接口的若干个子类方便调用。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dosomething(<span class="keyword">new</span> MethodA());</span><br><span class="line">dosomething(<span class="keyword">new</span> MethodB());</span><br></pre></td></tr></table></figure></p>
+<p>模板模式： 共性的步骤放在抽象类中公共实现，差异化的步骤在各个子类中实现 使用继承和重写实现模板设计模式 可以使用abstract和final来控制公共的和具体的方法<br>迭代器模式：顺序访问对象的元素而不暴露其底层表示 iterator 实现 hasNext,next,remove <strong>Iterable接口：实现该接口的集合对象是可迭代遍历的</strong></p>
 
       
     </div>
