@@ -12,11 +12,11 @@ I am a fourth-year **Ph.D. student** in the University of Science and Technology
 
 My research interests are in improving the general reasoning abilities of foundational LLMs, LLMs for recommendation and scaling reinforcement reasoning.
 
-- **General Reasoning of Foundational LLMs**: Focusing on enhancing the general reasoning abilities of LLMs during the pre-training phase, including STEM, code, and logical reasoning, as in <b style="color:blue">Qwen2.5 Series, Qwen3 Series, QwQ.</b>
+- **General Reasoning of Foundational LLMs**: Focusing on enhancing the general reasoning abilities of LLMs during the pre-training phase, including STEM, code, and logical reasoning, as in <b style="color:#87CEEB">Qwen2.5 Series, Qwen3 Series, QwQ.</b>
 
-- **LLMs for recommendation**: Exploring the application of LLMs in recommendations, including user modeling and dynamically adapting to users' new interests, as in <b style="color:blue">TallRec, BigRec, $D^3$, RecICL.</b>
+- **LLMs for recommendation**: Exploring the application of LLMs in recommendations, including user modeling and dynamically adapting to users' new interests, as in <b style="color:#87CEEB">TallRec, BigRec, D^3, RecICL.</b>
 
-- **Scaling Reinforcement Learning**: Automating the scaling of RL question-answer pairs through code-related problems to enhance general reasoning capabilities, as in <b style="color:blue">TeaR.</b>
+- **Scaling Reinforcement Learning**: Automating the scaling of RL question-answer pairs through code-related problems to enhance general reasoning capabilities, as in <b style="color:#87CEEB">TeaR.</b>
 
 
 ##  **🔥 News**
@@ -32,14 +32,14 @@ My research interests are in improving the general reasoning abilities of founda
 
 ## **🚀 Selected Publications**
 (*=equal contribution)
-- **Qwen3 Technical Report**. <b style="color:red">*Core Contributor*</b> [[paper]](https://arxiv.org/pdf/2505.09388)
-- **Qwen2.5 Technical Report**. <b style="color:red">*Core Contributor*</b> [[paper]](https://arxiv.org/pdf/2412.15115)
+- **Qwen3 Technical Report**. <b style="color:#f73d1b">*Core Contributor*</b> [[paper]](https://arxiv.org/pdf/2505.09388)
+- **Qwen2.5 Technical Report**. <b style="color:#f73d1b">*Core Contributor*</b> [[paper]](https://arxiv.org/pdf/2412.15115)
 - Xiaoyuan Li*, **Keqin Bao***, Yubo Ma, Moxin Li, Wenjie Wang, Rui Men, Yichang Zhang, Fuli Feng, Dayiheng Liu, Junyang Lin. **MTR-Bench: A Comprehensive Benchmark for Multi-Turn Reasoning Evaluation**. [[paper]](https://arxiv.org/pdf/2505.17123)
 - **Keqin Bao**, Nuo Chen, Xiaoyuan Li, Binyuan Hui, Bowen Yu, Fuli Feng, Junyang Lin, Xiangnan He, Dayiheng Liu. 	
 **Teaching LLM to Reason: Reinforcement Learning from Algorithmic Problems without Code**.
-- **Keqin Bao***, Jizhi Zhang*, Yang Zhang, Wenjie Wang, Fuli Feng, Xiangnan He. **Tallrec: An effective and efficient tuning framework to align large language model with recommendation**. <b style="color:red">*Cited by 471*</b> [[paper]](https://arxiv.org/pdf/2305.00447) 
-- Jizhi Zhang*, **Keqin Bao***, Yang Zhang, Wenjie Wang, Fuli Feng, Xiangnan He. **Is chatgpt fair for recommendation? evaluating fairness in large language model recommendation**. <b style="color:red">*Cited by 199*</b> [[paper]](https://arxiv.org/pdf/2305.07609) 
-- **Keqin Bao***, Jizhi Zhang*, Wenjie Wang, Yang Zhang, Zhengyi Yang, Yanchen Luo, Chong Chen, Fuli Feng, Qi Tian. **A bi-step grounding paradigm for large language models in recommendation systems**.  <b style="color:red">*Cited by 90*</b> [[paper]](https://arxiv.org/pdf/2308.08434) 
+- **Keqin Bao***, Jizhi Zhang*, Yang Zhang, Wenjie Wang, Fuli Feng, Xiangnan He. **Tallrec: An effective and efficient tuning framework to align large language model with recommendation**. <b style="color:#f73d1b">*Cited by 471*</b> [[paper]](https://arxiv.org/pdf/2305.00447) 
+- Jizhi Zhang*, **Keqin Bao***, Yang Zhang, Wenjie Wang, Fuli Feng, Xiangnan He. **Is chatgpt fair for recommendation? evaluating fairness in large language model recommendation**. <b style="color:#f73d1b">*Cited by 199*</b> [[paper]](https://arxiv.org/pdf/2305.07609) 
+- **Keqin Bao***, Jizhi Zhang*, Wenjie Wang, Yang Zhang, Zhengyi Yang, Yanchen Luo, Chong Chen, Fuli Feng, Qi Tian. **A bi-step grounding paradigm for large language models in recommendation systems**.  <b style="color:#f73d1b">*Cited by 90*</b> [[paper]](https://arxiv.org/pdf/2308.08434) 
 
 
 ## **📚 Publications**
