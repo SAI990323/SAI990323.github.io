@@ -24,6 +24,7 @@ I am a fourth-year **Ph.D. student** in the University of Science and Technology
 {% endif %}
 
 ### 2025
+- **Qwen3 Technical Report** **Core Contributor** [[paper]](https://arxiv.org/pdf/2505.09388)
 - Xiaoyuan Li, **Keqin Bao**, Yubo Ma, Moxin Li, Wenjie Wang, Rui Men, Yichang Zhang, Fuli Feng, Dayiheng Liu, Junyang Lin. **MTR-Bench: A Comprehensive Benchmark for Multi-Turn Reasoning Evaluation**. [[paper]](https://arxiv.org/pdf/2505.17123)
 - Shihao Cai, Chongming Gao, Yang Zhang, Wentao Shi, Jizhi Zhang, **Keqin Bao**, Qifan Wang, Fuli Feng. **K-order Ranking Preference Optimization for Large Language Models** [[paper]]()
 - Xiaoyuan Li, Moxin Li, Rui Men, Yichang Zhang, **Keqin Bao**, Wenjie Wang, Fuli Feng, Dayiheng Liu, Junyang Lin. **HellaSwag-Pro: A Large-Scale Bilingual Benchmark for Evaluating the Robustness of LLMs in Commonsense Reasoning** [[paper]](https://arxiv.org/pdf/2502.11393)
