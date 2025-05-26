@@ -14,7 +14,7 @@ My research interests are in improving the general reasoning abilities of founda
 
 - **General Reasoning of Foundational LLMs**: Focusing on enhancing the general reasoning abilities of LLMs during the pre-training phase, including STEM, code, and logical reasoning, as in <b style="color:#87CEEB">Qwen2.5 Series, Qwen3 Series, QwQ.</b>
 
-- **LLMs for recommendation**: Exploring the application of LLMs in recommendations, including user modeling and dynamically adapting to users' new interests, as in <b style="color:#87CEEB">TallRec, BigRec, D^3, RecICL.</b>
+- **LLMs for Recommendation**: Exploring the application of LLMs in recommendations, including user modeling and dynamically adapting to users' new interests, as in <b style="color:#87CEEB">TallRec, BigRec, D^3, RecICL.</b>
 
 - **Scaling Reinforcement Learning**: Automating the scaling of RL question-answer pairs through code-related problems to enhance general reasoning capabilities, as in <b style="color:#87CEEB">TeaR.</b>
 
