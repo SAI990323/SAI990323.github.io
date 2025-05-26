@@ -11,7 +11,11 @@ I am a fourth-year **Ph.D. student** in the University of Science and Technology
 
 
 ##  **🔥 News**
-- `2025-05`: Three papers accepted to *ACL 2025*
+- **2025-05**: Three papers accepted to *ACL 2025*
+- **2025-05**: Qwen3 Technical Report is officially out!
+- **2025-04**: Two papers accepted to *SIGIR 2025*
+- **2024-12**: One paper accepted to *TKDE*
+- **2024-10**: Two papers accepted to *EMNLP 2024*
 
 
 ## **📚 Publications**
@@ -20,13 +24,24 @@ I am a fourth-year **Ph.D. student** in the University of Science and Technology
 {% endif %}
 
 ### 2025
-
+- Xiaoyuan Li, **Keqin Bao**, Yubo Ma, Moxin Li, Wenjie Wang, Rui Men, Yichang Zhang, Fuli Feng, Dayiheng Liu, Junyang Lin. **MTR-Bench: A Comprehensive Benchmark for Multi-Turn Reasoning Evaluation**. [[paper]](https://arxiv.org/pdf/2505.17123)
+- Shihao Cai, Chongming Gao, Yang Zhang, Wentao Shi, Jizhi Zhang, **Keqin Bao**, Qifan Wang, Fuli Feng. **K-order Ranking Preference Optimization for Large Language Models** [[paper]]()
+- Xiaoyuan Li, Moxin Li, Rui Men, Yichang Zhang, **Keqin Bao**, Wenjie Wang, Fuli Feng, Dayiheng Liu, Junyang Lin. **HellaSwag-Pro: A Large-Scale Bilingual Benchmark for Evaluating the Robustness of LLMs in Commonsense Reasoning** [[paper]](https://arxiv.org/pdf/2502.11393)
 
 ### 2024
+- Shihao Cai, Jizhi Zhang, **Keqin Bao**, Chongming Gao, Qifan Wang, Fuli Feng, Xiangnan He. Agentic Feedback Loop Modeling Improves Recommendation and User Simulation [[paper]](https://arxiv.org/pdf/2410.20027)
+- **Keqin Bao**, Jizhi Zhang, Yang Zhang, Xinyue Huo, Chong Chen, Fuli Feng. **Decoding Matters: Addressing Amplification Bias and Homogeneity Issue in Recommendations for Large Language Models** [[paper]](https://arxiv.org/pdf/2406.14900)
+- Yang Zhang, Juntao You, Yimeng Bai, Jizhi Zhang, **Keqin Bao**, Wenjie Wang, Tat-Seng Chua. **Causality-Enhanced Behavior Sequence Modeling in LLMs for Personalized Recommendation** [[paper]](https://arxiv.org/pdf/2410.22809)
+
 
 
 ## **📝 Services**
 - **Reviewer for**  
+  - ACL 2024, 2025
+  - EMNLP 2024
+  - SIGIR 2025
+  - RecSys 2024, 2025
+  - TOIS, TORS, TKDD, TKDE
 
 
 ## **🎓 Education**
