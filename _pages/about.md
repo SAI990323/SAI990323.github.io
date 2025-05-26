@@ -7,7 +7,7 @@ redirect_from:
 - /about.html
 ---
  
-I am a fourth-year **Ph.D. student** in the University of Science and Technology of China, advised by Prof. [Xiangnan He](http://staff.ustc.edu.cn/~hexn/) and [Fuli Feng](https://fulifeng.github.io/).  My research interests are in pre-training of LLM, improving the general reasoning capabilities of the model，and LLMs for recommendation.
+I am a fourth-year **Ph.D. student** in the University of Science and Technology of China, advised by Prof. [Xiangnan He](http://staff.ustc.edu.cn/~hexn/) and [Fuli Feng](https://fulifeng.github.io/).  My research interests are in pre-training of LLM, improving the general reasoning capabilities of the LLM, and LLMs for recommendation.
 
 
 ##  **🔥 News**
