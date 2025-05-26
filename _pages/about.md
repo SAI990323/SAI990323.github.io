@@ -7,17 +7,35 @@ redirect_from:
 - /about.html
 ---
  
-I am a fourth-year **Ph.D. student** in the University of Science and Technology of China, advised by Prof. [Xiangnan He](http://staff.ustc.edu.cn/~hexn/) and [Fuli Feng](https://fulifeng.github.io/).  My research interests are in pre-training of LLM, improving the general reasoning capabilities of the LLM, and LLMs for recommendation.
+I am a fourth-year **Ph.D. student** in the University of Science and Technology of China, advised by Prof. [Xiangnan He](http://staff.ustc.edu.cn/~hexn/) and [Fuli Feng](https://fulifeng.github.io/).  Previously, I received my bachelor's degree from the Elite College at Harbin Institute of Technology in 2021. I was awarded the National Scholarship for three consecutive years. Additionally, I won two gold medals in the ACM-ICPC. 
+
+
+My research interests are in improving the general reasoning abilities of foundational LLMs, and LLMs for recommendation.
+
+- **General Reasoning of Foundational LLMs**: Focusing on enhancing the general reasoning abilities of LLMs during the pre-training phase, including STEM, code, and logical reasoning, as in <b style="color:blue">[Qwen2.5 Series, Qwen3 Series, QwQ.]</b>
+
+- **LLMs for recommendation**: Exploring the application of LLMs in recommendations, including user modeling and dynamically adapting to users' new interests, as in <b style="color:blue">[TallRec, BigRec, $D^3$, RecICL.]</b>
+
+- **Scaling Reinforcement Learning**: Automating the scaling of RL question-answer pairs through code-related problems to enhance general reasoning capabilities, as in <b style="color:blue">[TeaR.]</b>
 
 
 ##  **🔥 News**
 - **2025-05**: Three papers accepted to *ACL 2025*
 - **2025-05**: Qwen3 Technical Report is officially out!
+- **2025-04**: QwQ-32B is released!
 - **2025-04**: Two papers and one tutorial accepted to *SIGIR 2025*
+- **2024-12**: QwQ-32B-Preview is released!
 - **2024-12**: One paper accepted to *TKDE*
 - **2024-12**: Qwen2.5 Technical Report is officially out!
 - **2024-10**: Two papers accepted to *EMNLP 2024*
 
+
+## **🚀 Selected Publications**
+- **Qwen3 Technical Report**. *Core Contributor* [[paper]](https://arxiv.org/pdf/2505.09388)
+- **Qwen2.5 Technical Report**. *Core Contributor* [[paper]](https://arxiv.org/pdf/2412.15115)
+- Xiaoyuan Li, **Keqin Bao**, Yubo Ma, Moxin Li, Wenjie Wang, Rui Men, Yichang Zhang, Fuli Feng, Dayiheng Liu, Junyang Lin. **MTR-Bench: A Comprehensive Benchmark for Multi-Turn Reasoning Evaluation**. [[paper]](https://arxiv.org/pdf/2505.17123)
+- **Keqin Bao**, Nuo Chen, Xiaoyuan Li, Binyuan Hui, Bowen Yu, Fuli Feng, Junyang Lin, Xiangnan He, Dayiheng Liu. 	
+**Teaching LLM to Reason: Reinforcement Learning from Algorithmic Problems without Code**.
 
 ## **📚 Publications**
 {% if site.author.googlescholar %}
