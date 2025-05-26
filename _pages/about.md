@@ -39,7 +39,7 @@ My research interests are in improving the general reasoning abilities of founda
 **Teaching LLM to Reason: Reinforcement Learning from Algorithmic Problems without Code**.
 - **Keqin Bao***, Jizhi Zhang*, Yang Zhang, Wenjie Wang, Fuli Feng, Xiangnan He. **Tallrec: An effective and efficient tuning framework to align large language model with recommendation**. <b style="color:red">*Cited by 471*</b> [[paper]](https://arxiv.org/pdf/2305.00447) 
 - Jizhi Zhang*, **Keqin Bao***, Yang Zhang, Wenjie Wang, Fuli Feng, Xiangnan He. **Is chatgpt fair for recommendation? evaluating fairness in large language model recommendation**. <b style="color:red">*Cited by 199*</b> [[paper]](https://arxiv.org/pdf/2305.07609) 
-- **Keqin Bao***, Jizhi Zhang*, Wenjie Wang, Yang Zhang, Zhengyi Yang, Yanchen Luo, Chong Chen, Fuli Feng, Qi Tian. **A bi-step grounding paradigm for large language models in recommendation systems.** . <b style="color:red">*Cited by 90*</b> [[paper]](https://arxiv.org/pdf/2308.08434) 
+- **Keqin Bao***, Jizhi Zhang*, Wenjie Wang, Yang Zhang, Zhengyi Yang, Yanchen Luo, Chong Chen, Fuli Feng, Qi Tian. **A bi-step grounding paradigm for large language models in recommendation systems**.  <b style="color:red">*Cited by 90*</b> [[paper]](https://arxiv.org/pdf/2308.08434) 
 
 
 ## **📚 Publications**
@@ -61,10 +61,10 @@ My research interests are in improving the general reasoning abilities of founda
 
 
 ### 2023
+- **Keqin Bao***, Jizhi Zhang*, Yang Zhang, Wenjie Wang, Fuli Feng, Xiangnan He. **Tallrec: An effective and efficient tuning framework to align large language model with recommendation**. [[paper]](https://arxiv.org/pdf/2305.00447) 
+- Jizhi Zhang*, **Keqin Bao***, Yang Zhang, Wenjie Wang, Fuli Feng, Xiangnan He. **Is chatgpt fair for recommendation? evaluating fairness in large language model recommendation**. [[paper]](https://arxiv.org/pdf/2305.07609) 
 - Yang Zhang, Fuli Feng, Jizhi Zhang, **Keqin Bao**, Qifan Wang, Xiangnan He. Collm: Integrating collaborative embeddings into large language models for recommendation [[paper]](https://arxiv.org/pdf/2310.19488)
 - **Keqin Bao**, Jizhi Zhang, Wenjie Wang, Yang Zhang, Zhengyi Yang, Yanchen Luo, Chong Chen, Fuli Feng, Qi Tian. **A bi-step grounding paradigm for large language models in recommendation systems** [[paper]](https://arxiv.org/pdf/2308.08434)
-
-
 
 ## **📝 Services**
 - **Reviewer for**  
