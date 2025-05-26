@@ -12,11 +12,11 @@ I am a fourth-year **Ph.D. student** in the University of Science and Technology
 
 My research interests are in improving the general reasoning abilities of foundational LLMs, and LLMs for recommendation.
 
-- **General Reasoning of Foundational LLMs**: Focusing on enhancing the general reasoning abilities of LLMs during the pre-training phase, including STEM, code, and logical reasoning, as in <b style="color:blue">[Qwen2.5 Series, Qwen3 Series, QwQ.]</b>
+- **General Reasoning of Foundational LLMs**: Focusing on enhancing the general reasoning abilities of LLMs during the pre-training phase, including STEM, code, and logical reasoning, as in <b style="color:blue">Qwen2.5 Series, Qwen3 Series, QwQ.</b>
 
-- **LLMs for recommendation**: Exploring the application of LLMs in recommendations, including user modeling and dynamically adapting to users' new interests, as in <b style="color:blue">[TallRec, BigRec, $D^3$, RecICL.]</b>
+- **LLMs for recommendation**: Exploring the application of LLMs in recommendations, including user modeling and dynamically adapting to users' new interests, as in <b style="color:blue">TallRec, BigRec, $D^3$, RecICL.</b>
 
-- **Scaling Reinforcement Learning**: Automating the scaling of RL question-answer pairs through code-related problems to enhance general reasoning capabilities, as in <b style="color:blue">[TeaR.]</b>
+- **Scaling Reinforcement Learning**: Automating the scaling of RL question-answer pairs through code-related problems to enhance general reasoning capabilities, as in <b style="color:blue">TeaR.</b>
 
 
 ##  **🔥 News**
