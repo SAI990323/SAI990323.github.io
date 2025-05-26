@@ -43,9 +43,8 @@ My research interests are in improving the general reasoning abilities of founda
 
 
 ## **📚 Publications**
-{% if site.author.googlescholar %}
 <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+ <b style="color:#f73d1b">*Cited by 3K+*</b> 
 
 ### 2025
 - **Qwen3 Technical Report**. *Core Contributor* [[paper]](https://arxiv.org/pdf/2505.09388)
