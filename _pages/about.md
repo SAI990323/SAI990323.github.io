@@ -76,7 +76,7 @@ My research interests are in improving the general reasoning abilities of founda
 
 ## **🎓 Education**
 - **University of Science and Technology of China**  
-  *Ph.D. in Computer Science* (2023 - present)  
+  *Ph.D. in Computer Science* (2021 - present)  
   Advisor: Prof. [Xiangnan He](http://staff.ustc.edu.cn/~hexn/) and [Fuli Feng](https://fulifeng.github.io/)
 
 - **Harbin Institute of Technology**  
