@@ -7,7 +7,7 @@ redirect_from:
 - /about.html
 ---
  
-I am a fourth-year **Ph.D. student** in the University of Science and Technology of China, advised by Prof. [Xiangnan He](http://staff.ustc.edu.cn/~hexn/) and [Fuli Feng](https://fulifeng.github.io/).  Previously, I received my bachelor's degree from the Elite College at Harbin Institute of Technology in 2021. I was awarded the National Scholarship for three years. Additionally, I won two gold medals in the ACM-ICPC. 
+I am a fourth-year **Ph.D. student** in the University of Science and Technology of China, advised by Prof. [Xiangnan He](http://staff.ustc.edu.cn/~hexn/) and [Fuli Feng](https://fulifeng.github.io/).  Previously, I received my bachelor's degree from the Elite College at Harbin Institute of Technology in 2021. I was awarded the National Scholarship for three years. 
 
 
 My research interests are in improving the general reasoning abilities of foundational LLMs, LLMs for recommendation and scaling reinforcement reasoning.
